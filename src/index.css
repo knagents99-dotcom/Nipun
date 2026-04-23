@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #0B1526;
+    color: #F1F5F9;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: #2563EB;
+    color: #fff;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-accent text-white font-semibold px-6 py-3 rounded-lg hover:bg-accent-muted transition-colors duration-200;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 border border-navy-700 text-slate-300 font-semibold px-6 py-3 rounded-lg hover:border-accent-light hover:text-white transition-colors duration-200;
+  }
+
+  .section-label {
+    @apply text-accent-light text-sm font-semibold tracking-widest uppercase;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-white leading-tight;
+  }
+
+  .section-subtitle {
+    @apply text-slate-400 text-lg leading-relaxed;
+  }
+
+  .card {
+    @apply bg-navy-900 border border-navy-700 rounded-2xl p-6 hover:border-accent/50 transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
